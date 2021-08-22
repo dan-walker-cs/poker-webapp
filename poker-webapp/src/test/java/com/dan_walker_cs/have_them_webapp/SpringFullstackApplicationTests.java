@@ -9,5 +9,4 @@ class SpringFullstackApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
