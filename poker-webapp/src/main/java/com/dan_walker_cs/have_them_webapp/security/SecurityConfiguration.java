@@ -48,9 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         // Default successful login URL
         http.formLogin()
                 .defaultSuccessUrl("/authsuccess", true);
-        http.formLogin()
-                .failureUrl("/login");
-        System.out.println(http.userDetailsService(userDetailsService));
     }
 
     // Exposes the PasswordEncoder Bean to Spring Security to assert encoding scheme.
