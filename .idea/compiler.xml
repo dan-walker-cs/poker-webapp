@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="have-them-webapp" target="11" />
+      <module name="have-them-webapp" target="1.8" />
       <module name="spring-fullstack" target="1.5" />
     </bytecodeTargetLevel>
   </component>

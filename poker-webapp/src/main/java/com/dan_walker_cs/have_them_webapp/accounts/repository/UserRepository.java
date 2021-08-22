@@ -1,6 +1,6 @@
-package com.dan_walker_cs.have_them_webapp.repository;
+package com.dan_walker_cs.have_them_webapp.accounts.repository;
 
-import com.dan_walker_cs.have_them_webapp.model.User;
+import com.dan_walker_cs.have_them_webapp.accounts.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

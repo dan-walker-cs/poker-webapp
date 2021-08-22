@@ -1,8 +1,8 @@
-package com.dan_walker_cs.have_them_webapp.service;
+package com.dan_walker_cs.have_them_webapp.accounts.service;
 
-import com.dan_walker_cs.have_them_webapp.model.AppUserDetails;
-import com.dan_walker_cs.have_them_webapp.model.User;
-import com.dan_walker_cs.have_them_webapp.repository.UserRepository;
+import com.dan_walker_cs.have_them_webapp.accounts.model.AppUserDetails;
+import com.dan_walker_cs.have_them_webapp.accounts.model.User;
+import com.dan_walker_cs.have_them_webapp.accounts.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

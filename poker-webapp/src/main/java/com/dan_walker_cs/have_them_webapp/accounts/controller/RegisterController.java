@@ -1,7 +1,7 @@
-package com.dan_walker_cs.have_them_webapp.controller;
+package com.dan_walker_cs.have_them_webapp.accounts.controller;
 
-import com.dan_walker_cs.have_them_webapp.model.User;
-import com.dan_walker_cs.have_them_webapp.repository.UserRepository;
+import com.dan_walker_cs.have_them_webapp.accounts.model.User;
+import com.dan_walker_cs.have_them_webapp.accounts.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

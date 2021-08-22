@@ -1,4 +1,4 @@
-package com.dan_walker_cs.have_them_webapp.security;
+package com.dan_walker_cs.have_them_webapp.accounts.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

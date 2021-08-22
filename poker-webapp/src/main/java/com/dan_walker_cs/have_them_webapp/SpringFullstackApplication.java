@@ -1,6 +1,6 @@
 package com.dan_walker_cs.have_them_webapp;
 
-import com.dan_walker_cs.have_them_webapp.repository.UserRepository;
+import com.dan_walker_cs.have_them_webapp.accounts.repository.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

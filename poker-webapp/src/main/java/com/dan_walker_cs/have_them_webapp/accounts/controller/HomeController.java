@@ -1,4 +1,4 @@
-package com.dan_walker_cs.have_them_webapp.controller;
+package com.dan_walker_cs.have_them_webapp.accounts.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
