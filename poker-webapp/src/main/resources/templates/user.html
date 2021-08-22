@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/resources/static/styles.css">
+    <title>Account</title>
+</head>
+<body class="text-center">
+    <header class = "project-header">
+        <div th:replace="~{fragments/navigation :: navigation}"></div>
+        <h1 class="mt-5">Account Information</h1>
+    </header>
+    <section>
+        <h3 class="mt-5">Welcome, <span th:text="${user}"></span>!</h3>
+
+        <a href="/logout" class="btn btn-lg btn-primary mt-5">Logout</a>
+    </section>
+
+    <div class="container fixed-bottom">
+        <hr>
+        <div th:replace="~{fragments/footer :: footer}"></div>
+    </div>
+</body>
+</html>
