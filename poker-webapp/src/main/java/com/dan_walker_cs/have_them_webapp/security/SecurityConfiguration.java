@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 // Tells Spring that this is a web security configuration class.
-@EnableWebSecurity
+//@EnableWebSecurity
 // This class extends Spring's default web security configuration class, allowing for custom
 //      security configuration steps through instances provided by Spring.
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
