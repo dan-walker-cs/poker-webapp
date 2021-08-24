@@ -2,12 +2,14 @@ package com.dan_walker_cs.have_them_webapp.game;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class Deck {
     private ArrayList<Card> deck;
     // private Image deckGraphic;
 
-    Deck() {
+    public Deck() {
         this.deck = new ArrayList<>();
         populateDeck();
     }
@@ -21,11 +23,11 @@ public class Deck {
     }
 
     public void shuffle() {
-
+        Collections.shuffle(deck);
     }
 
-    public void deal() {
-
+    public Card deal() {
+        return null;
     }
 
     public String toString() {
