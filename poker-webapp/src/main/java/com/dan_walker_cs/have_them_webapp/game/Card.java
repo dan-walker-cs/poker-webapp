@@ -7,7 +7,7 @@ public class Card {
     private String suit;
     //private Image image;
     public static final String[] validSuits = {"clubs","diamonds","hearts","spades"};
-    public static final String[] validValues ={"2","3","4","5","6","7","8","9","10","j","q","k"};
+    public static final String[] validValues ={"2","3","4","5","6","7","8","9","10","j","q","k","a"};
 
     public Card(String value, String suit) {
         setValue(value);

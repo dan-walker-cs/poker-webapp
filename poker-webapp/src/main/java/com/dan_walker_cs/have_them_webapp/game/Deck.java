@@ -3,7 +3,6 @@ package com.dan_walker_cs.have_them_webapp.game;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Random;
 
 public class Deck {
     private ArrayList<Card> deck;
@@ -28,6 +27,10 @@ public class Deck {
 
     public Card deal() {
         return null;
+    }
+
+    public int getCurrentSize() {
+        return deck.size();
     }
 
     public String toString() {

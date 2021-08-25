@@ -1,0 +1,3 @@
+2021-08-24 21:21:18,262 TRACE com.dan_walker_cs.have_them_webapp.accounts.controller.AuthSuccessController [http-nio-8080-exec-5] User: admin
+2021-08-24 21:21:18,267 TRACE com.dan_walker_cs.have_them_webapp.accounts.controller.AdminController [http-nio-8080-exec-6] User: admin
+2021-08-24 21:21:20,363 TRACE com.dan_walker_cs.have_them_webapp.accounts.controller.HomeController [http-nio-8080-exec-8] User: admin
