@@ -1,6 +1,4 @@
-package com.dan_walker_cs.have_them_webapp.game;
-
-import java.awt.*;
+package com.dan_walker_cs.have_them_webapp.game.model;
 
 public class Card {
     private String value;
@@ -31,6 +29,6 @@ public class Card {
     }
 
     public String toString() {
-        return "Card: " + value + " of " + suit;
+        return value + " of " + suit;
     }
 }

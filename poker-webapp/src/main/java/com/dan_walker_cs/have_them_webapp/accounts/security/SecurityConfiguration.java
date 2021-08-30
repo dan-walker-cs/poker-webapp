@@ -41,7 +41,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         //      specifies form-based login, as well as logout functionality
         http.authorizeRequests()
                 .antMatchers("/admin").hasRole("ADMIN")
-                .antMatchers("/user","/user/{username}").hasAnyRole("USER", "ADMIN")
+                .antMatchers("/user/{username}").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/","/home","/register","/login").permitAll()
                 .and().formLogin()
                 .and().logout()

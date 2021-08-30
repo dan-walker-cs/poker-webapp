@@ -1,2 +1,1 @@
-- add logging
-- figure out how I want to verify and add users
+- JS code for slider value beneath bar

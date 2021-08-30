@@ -13,19 +13,88 @@
     <title>Account</title>
 </head>
 <body class="text-center">
-    <header class = "project-header">
+    <header class="project-header">
         <div th:replace="~{fragments/navigation :: navigation}"></div>
-        <h1 class="mt-5">Account Information</h1>
+        <h1 class="mt-5">Wassup ya big dumb nerd. Yeah, I'm talkin' to you, <span th:text="${user}"></span>!</h1>
     </header>
-    <section>
-        <h3 class="mt-5">Welcome, <span th:text="${user}"></span>!</h3>
 
-        <a href="/logout" class="btn btn-lg btn-primary mt-5">Logout</a>
-    </section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h3>Create a game</h3>
+
+                <!-- Error div -->
+                <div class="row mt-5">
+                    <ul>
+                        <li th:each="error:${errorList}" th:text="${error}" style="color:red"></li>
+                    </ul>
+                </div>
+
+                <form class="justify-content-center" action="#" th:action="@{/user/${username}}" th:object="${gameRules}" method="post">
+                    <!-- Number of Players -->
+                    <div class="row mt-5 justify-content-center">
+                        <div class="form-group mb-2">
+                            <label class="mr-2">Number of players: </label>
+                            <input type="text" class="form-control" th:field="*{numPlayers}" placeholder="2-9 Players"/>
+                        </div>
+                    </div>
+
+                    <!-- Action Timer Length -->
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col">
+                            <div class="row justify-content-center">
+                                <label for="customRange3" class="form-label">How long should players have to act each turn?</label>
+                            </div>
+                            <div class="row">
+                                1:00<input type="range" class="form-range ml-2 mr-2" min="1" max="5" step="0.5" value="1" id="customRange3" style="width:80%" th:field="*{actionTimerLength}">5:00
+                            </div>
+                            <!-- Use this when you add the JS code to get the slider value -->
+                            <div class="row justify-content-center">
+                                <span id="slider_value"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blinds Dropdown (value is bigBlind) -->
+                    <div class="row mt-5 justify-content-center">
+                        <select class="form-select form-select-lg mb-3" data-style="btn-primary" aria-label=".form-select-lg example" th:field="*{bigBlind}">
+                            <option value="-1">Select your blinds</option>
+                            <option value="0.10">0.05/0.10</option>
+                            <option value="0.20">0.10/0.20</option>
+                            <option value="0.50">0.25/0.50</option>
+                            <option value="1.00">0.50/1.00</option>
+                        </select>
+                    </div>
+
+                    <!-- Game Type Dropdown -->
+                    <div class="row mt-5 justify-content-center">
+                        <select class="form-select form-select-lg mb-3" data-style="btn-primary" aria-label=".form-select-lg example" th:field="*{gameType}">
+                            <option value="-1">Select game mode</option>
+                            <option value="holdem">Texas Hold 'em</option>
+                        </select>
+                    </div>
+
+                    <div class="row mt-5 justify-content-center">
+                        <button type="submit" href="/user/${username}" class="btn btn-lg btn-primary mb-2">Create Game</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 d-flex flex-column">
+                <h3>Join an existing game</h3>
+
+
+            </div>
+        </div>
+    </div>
+
 
     <div class="container fixed-bottom">
-        <hr>
+        <hr color="CECECE">
         <div th:replace="~{fragments/footer :: footer}"></div>
     </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </body>
 </html>
