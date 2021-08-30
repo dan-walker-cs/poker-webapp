@@ -1,1 +1,2 @@
 - JS code for slider value beneath bar
+- get footer working right on user.html for all resolutions
