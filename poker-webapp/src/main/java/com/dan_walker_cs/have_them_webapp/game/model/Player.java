@@ -3,25 +3,38 @@ package com.dan_walker_cs.have_them_webapp.game.model;
 import java.util.ArrayList;
 
 public class Player {
+    private String id;
+    private String name;
     private double cashStack;
     private ArrayList<Card> hand;
-    private int seatNum;
     private boolean isActive;
+    private Seat seat;
+    private double chipsInPlay;
 
-    public Player(double cashStack, ArrayList<Card> hand, int seatNum) {
+    public Player(String id, String name, double cashStack, ArrayList<Card> hand, boolean isActive) {
+        this.id = id;
+        this.name = name;
         this.cashStack = cashStack;
         this.hand = hand;
-        this.seatNum = seatNum;
-        // not active until bought in
-        this.isActive = false;
+        this.isActive = isActive;
+        this.seat = null;
+        this.chipsInPlay = 0;
     }
 
-    public void addToCashStack(double amount) {
-        this.cashStack = cashStack + amount;
+    public String getId() {
+        return id;
     }
 
-    public void removeFromCashStack(double amount) {
-        this.cashStack = cashStack - amount;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public double getCashStack() {
@@ -36,16 +49,16 @@ public class Player {
         return hand;
     }
 
-    public void setHand(ArrayList<Card> hand) {
-        this.hand = hand;
+    public void addHand(Card card) {
+        this.hand.add(card);
     }
 
-    public int getSeatNum() {
-        return seatNum;
+    public Seat getSeat() {
+        return seat;
     }
 
-    public void setSeatNum(int seatNum) {
-        this.seatNum = seatNum;
+    public void setSeat(Seat seat) {
+        this.seat = seat;
     }
 
     public boolean isActive() {
@@ -54,5 +67,13 @@ public class Player {
 
     public void setActive(boolean active) {
         isActive = active;
+    }
+
+    public double getChipsInPlay() {
+        return chipsInPlay;
+    }
+
+    public void setChipsInPlay(double chipsInPlay) {
+        this.chipsInPlay = chipsInPlay;
     }
 }
